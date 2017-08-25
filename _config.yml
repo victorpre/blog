@@ -1,0 +1,39 @@
+theme: materialize-jekyll
+# Site settings
+title: Victor Presumido - Software Engineer
+name: Victor Presumido
+description: Blog sobre desenvolvimento de software.
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "http://www.victorpre.com" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+
+# User settings
+profile_img_url: http://res.cloudinary.com/victorpre/image/upload/v1503273008/user_int6md.jpg
+username: victorpre
+user_description: Engenheiro de software, apaixonado por desafios, tecnologia, pessoas & melhoramento pessoal.
+email: victor.presumido@gmail.com
+github_username:  victorpre
+fb_username: victorpre
+twitter_username: victorpre
+instagram_username: victorpre
+linkedin_username: victorpre
+disqus_username: victorpre
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# sass
+sass:
+  sass_dir: '_sass'
+  style: compressed
+
+#links
+links:
+  - title: Home
+    url: "http://victorpre.com"
+    external: true
+  - title: Blog
+    url: /
+  - title: Tags
+    url: /tags

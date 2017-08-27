@@ -4,7 +4,7 @@ name: Victor Presumido
 description: Blog sobre desenvolvimento de software.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://www.victorpre.com" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
-
+google_analytics: 'UA-105337946-1'
 # User settings
 profile_img_url: http://res.cloudinary.com/victorpre/image/upload/v1503273008/user_int6md.jpg
 username: victorpre

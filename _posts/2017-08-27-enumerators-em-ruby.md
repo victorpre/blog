@@ -61,7 +61,7 @@ a vida dos programadores.
 
 ### `map` e `collect`
 
-Este dois métodos são muito utilizados no ruby, com eles é possível que um novo `Array` seja retornado contendo o valor retornado por cada iteração do bloco.
+Este dois métodos (um alias do outro) são muito utilizados no ruby: com eles é possível que um novo `Array` seja retornado contendo o valor retornado por cada iteração do bloco.
 Isso significa que com eles conseguimos aplicar um trecho de código em todos os elementos da nossa coleção.
 
 

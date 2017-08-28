@@ -67,16 +67,18 @@ Isso significa que com eles conseguimos aplicar um trecho de código em todos os
 
 ### Buscando em um `Enumerator`
 
-Para fazer buscas, os dois métodos mais usados nessa classe são `find_all` e `select` que tem a mesma função do `bsearch` da classe `Array`
-que na verdade acaba sendo mais eficiente por utilizar um [algoritmo de busca binária](https://en.wikipedia.org/wiki/Binary_search_algorithm) em sua implementação:
+Para fazer buscas, os dois métodos mais usados nessa classe são `find_all` e `select` onde ambos retornam uma coleção com os dados que atendem ao critério passado dentro do bloco. Vale notar que caso queria apenas um resultado, é recomendado que outros métodos sejam usados tais como o `find` por exemplo, que tem sua execução interrompida quando a condição é atingida.
+
+Dentro da classe `Array` temos ainda o método `bsearch` que na verdade acaba sendo mais performático por utilizar um [algoritmo de busca binária](https://en.wikipedia.org/wiki/Binary_search_algorithm) em sua implementação:
 
 {% highlight ruby %}
-  BIG_NUM = 5_000_000
+  BIG_NUM = 50_000_000
   require 'benchmark'
   Benchmark.bm do |x|
-    x.report('find_all'){ (0..BIG_NUM).find_all{|x| x==BIG_NUM} } # 0.299337 
-    x.report('select'){(0..BIG_NUM).select{|x| x==BIG_NUM} }      # 0.304704
-    x.report('bsearch'){(0..BIG_NUM).bsearch{|x| x==BIG_NUM} }    # 0.000014
+    x.report('find_all'){ (0..BIG_NUM).find_all{|x| x>BIG_NUM/20 }.first } # 4.514329s
+    x.report('select'){(0..BIG_NUM).select{|x| x>BIG_NUM/20 }.first }      # 4.153905s
+    x.report('find'){(0..BIG_NUM).find{|x| x>BIG_NUM/20 } }                # 0.146861s
+    x.report('bsearch'){(0..BIG_NUM).bsearch{|x| x>BIG_NUM/20 } }          # 0.000005s
   end
 {% endhighlight %}
 

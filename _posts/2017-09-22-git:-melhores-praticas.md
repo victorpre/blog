@@ -91,4 +91,13 @@ $ git push -u origin 'feature-user-portal'
 Enquanto estava escrevendo este artigo, procurando alguns exemplos de mensagens de commit não muitos boas e então me deparei com [este site](http://www.commitlogsfromlastnight.com/).
  **Não** ~~commita~~ cometa este mesmo erro.
 
+ Um commit bem escrito, conciso e consistente é fundamental quando utilizando `git log` and claro, esta é uma ferramente muito importante e poderosa
+ quando trabalhando com versionamento de código. Além disso, é uma ótima maneira de comunicar modificações para outros desenvolvedores e para seu futuro eu também 
+ (quem nunca fez algo e depois não lembrava o porque de ter feito? :thinking: )
+
+ Em um projeto grande e de longo termo, o seu sucesso é fortemente dependente de sua **manutenabilidade** e por essa razão é muito importante
+ para aqueles que mantém o projeto conseguirem utilizar efetivamente o log do projeto.
+
+ Entendendo commits de outros e seus pull requests torna muito mais fácil de entender quando existe uma descrição (mesmo que breve) do que foi feito.
+
 ### Revisão de código (*code review*)

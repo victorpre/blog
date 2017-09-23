@@ -91,13 +91,89 @@ $ git push -u origin 'feature-user-portal'
 Enquanto estava escrevendo este artigo, procurando alguns exemplos de mensagens de commit não muitos boas e então me deparei com [este site](http://www.commitlogsfromlastnight.com/).
  **Não** ~~commita~~ cometa este mesmo erro.
 
- Um commit bem escrito, conciso e consistente é fundamental quando utilizando `git log` and claro, esta é uma ferramente muito importante e poderosa
+ Um commit bem escrito, conciso e consistente é fundamental quando utilizando `git log` e claro, esta é uma ferramente muito importante e poderosa
  quando trabalhando com versionamento de código. Além disso, é uma ótima maneira de comunicar modificações para outros desenvolvedores e para seu futuro eu também 
- (quem nunca fez algo e depois não lembrava o porque de ter feito? :thinking: )
+ (quem nunca fez algo e depois não lembrava o porque de ter feito? :thinking: ).
 
  Em um projeto grande e de longo termo, o seu sucesso é fortemente dependente de sua **manutenabilidade** e por essa razão é muito importante
  para aqueles que mantém o projeto conseguirem utilizar efetivamente o log do projeto.
 
  Entendendo commits de outros e seus pull requests torna muito mais fácil de entender quando existe uma descrição (mesmo que breve) do que foi feito.
 
+ Existem algumas regras que ajudam a compor uma boa mensagem de commit, ao digitar `git commit`, o editor configurado na opção *core.editor* de seu `.gitconfig`
+ vai abrir para que a mensagem de commit seja escrita e então as seguintes regras podem ser seguidas:
+
+ 1. Separe as linhas de assunto e corpo do commit com uma linha em branco 
+ 2. Limite o tamanho da linha do assunto para 50 caractéres (colunas)
+ 3. Letra maiúscula no início do assunto
+ 4. Não termina o assunto com um ponto fina
+ 5. Utilize o modo imperativoo na linha do assunto
+ 6. Encapsule corpo do commit em 72 colunas
+ 7. Utilize o corpo para explicar o `o que` e o `porque` vs. `como`.
+
+ Se você estiver comitando algo não muito complexo que não necessita de uma explicação detalhada, é possível adicionar uma mensagem ao commit passando a flag `-m`, porém, evite:
+
+
+{% highlight bash  %}
+$ git commit -m'Summarize changes in around 50 characters or less'
+{% endhighlight %}
+
+Um exemplo agora de uma boa mensagem de commit:
+
+
+{% highlight bash  %}
+$ git commit
+{% endhighlight %}
+
+Dentro de seu editor:
+
+{% highlight bash  %}
+# Subject:
+Exemplify a good commit message
+
+# Metadata (optional):
+Resolves TASK-340
+
+# Body:
+This commit message body is used to explain the changes
+inside the commit that is not simply explained through a
+simple one-liner subject mesage.
+
+{% endhighlight %}
+
+Para que se torne mais fácil e automática a escrita de boas mensagens de commit, o git permite que seja definido um `prepare-commit-msg` hook em que todos seu commits
+dispararão esse gatilho antes de você escrever sua mensagem de commit, assim ter permitindo adicionar algumas informações padrões nas mensagens.
+
+
 ### Revisão de código (*code review*)
+
+Beleza, você já criou uma branch com um nome coerente e também descreveu todos seus commits com mensagens de commit claras e objetivas seguindo algum tipo de padrão. O que fazer agora?
+
+O próximo passo seria mesclar/mergear suas modificações ao branch de onde seu *working branch* foi originado. Para que isso ocorra de maneira ideal, primeiramente é muito importante que
+suas alterações no código não quebrem outras funcionalidades do software e para garantir isso,é legal que aquelas suas alterações sejam cobertas com testes automatizados e
+mais importante, se sua aplicação já possuir uma suíte de testes, suas modificações não devem quebrar nenhum dos testes existentes.
+
+Existem algumas ferramentas que ajudam os desenvolvedores no processo de merge, executando os testes automáticos do sistema e só permitindo a mesclagem caso eles passem, mas este é um
+outro tópico.
+
+Terminando o desenvolvimento da sua funcionalidade é **muito** importante que outros desenvolvedores revisem seu código. Isso ajuda muito no crescimento técnico do time, quem revisa aprende
+e quem tem seus commits revisados aprende muito também. Esta etapa do processo deve sempre acontecer quando trabalhando em time.. ninguém é perfeito! Outras pessoas podem identificar erros 
+no seu código, ou identificar casos de testes que não foram previstos na implementação desenvolvida por você.
+
+Isso tudo acontence quando um *Pull Request* é aberto, que nada mais é do que a intenção de mesclar suas modificações ao branch de onde foi anteriormente originado. Lembre-se que todos os comentários
+realizados em um Pull Request não devem ser levados como uma crítica pessoal e sim oportunidades de crescimento profissional, você vai aprender com estes comentários.
+
+Depois de possíveis alterações e melhorias acontecerem no seu Pull Request e ele for aprovado para o merge, vá em frente! :grimacing:
+
+
+
+### Concluindo
+
+Estas são apenas algumas boas práticas para seu controle de versões git que acredito facilitar a vida de desenvolvedores quando trabalhando em uma equipe dentro de um mesmo repositório. Espero que o
+conteúdo tenha ficado claro e de fácil compreensão.
+
+
+-- Abraços.
+
+
+

@@ -23,6 +23,9 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 
+plugins:
+  - jemoji
+
 #links
 links:
   - title: Home

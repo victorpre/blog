@@ -1,14 +1,14 @@
 # Site settings
 title: Victor Presumido - Software Engineer
 name: Victor Presumido
-description: Blog sobre desenvolvimento de software.
+description: Blog about software development and other random stuff.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.victorpre.com" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 google_analytics: 'UA-105337946-1'
 # User settings
 profile_img_url: http://res.cloudinary.com/victorpre/image/upload/v1503273008/user_int6md.jpg
 username: victorpre
-user_description: Engenheiro de software, apaixonado por desafios, tecnologia, pessoas & melhoramento pessoal.
+user_description: Software Enginer, keyboard enthusiast, beer & coffee..
 email: victor.presumido@gmail.com
 github_username:  victorpre
 fb_username: victorpre
@@ -33,5 +33,3 @@ links:
     external: true
   - title: Blog
     url: /
-  - title: Tags
-    url: /tags

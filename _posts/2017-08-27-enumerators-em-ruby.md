@@ -11,6 +11,8 @@ tags:
   - backend  
 twitter_text: 'Entendendo a classe Enumerator em ruby'
 introduction: 'Enumerator: a classe que facilita iterações em ruby'
+share_text: 'Compartilhe'
+reading_time: 'de leitura'
 ---
 
 

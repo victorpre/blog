@@ -9,6 +9,8 @@ tags:
   - git
 twitter_text: 'Boas práticas utilizando git'
 introduction: 'Algumas boas práticas ao utilizar sua ferramenta de versionamento. Nomeando commits e branchs'
+share_text: 'Compartilhe'
+reading_time: 'de leitura'
 ---
 
 ## Por que versionar o código de seu projeto?

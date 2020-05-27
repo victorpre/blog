@@ -4,7 +4,7 @@ title: 'Enumerators em Ruby'
 date: 2017-08-26 12:47:26
 description: 'Mas como assim, preciso de uma classe para fazer iterações?'
 main-class: 'jekyll'
-image: 'http://res.cloudinary.com/victorpre/image/upload/v1503798447/blogposts/Screen_Shot_2017-08-26_at_10.45.01_PM.png'
+image: 'https://res.cloudinary.com/victorpre/image/upload/v1503798447/blogposts/Screen_Shot_2017-08-26_at_10.45.01_PM.png'
 color: '#B31917'
 tags:
   - ruby

@@ -2,7 +2,7 @@
 layout: post
 title: "Git: Melhores práticas"
 date: 2017-09-22 00:02:24
-image: 'http://res.cloudinary.com/victorpre/image/upload/v1506043766/blogposts/gitlogo.png'
+image: 'https://res.cloudinary.com/victorpre/image/upload/v1506043766/blogposts/gitlogo.png'
 description: 'Entendendo como se beneficiar da sua ferramenta de versionamento'
 main-class: 'jekyll'
 tags:
